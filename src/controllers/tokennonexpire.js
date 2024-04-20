@@ -7,7 +7,7 @@ const verificarExpiracionToken = () => {
     const expiracion = new Date(tokenData.exp * 1000);
     if (new Date() > expiracion) {
       localStorage.removeItem("token");
-      alert("Tu sesión ha expirado, por favor inicia sesión nuevamente.");
+      alert("Tu sesión ha expirado por favor inicia sesión nuevamente.");
       return false;
     } else {
       return true;
